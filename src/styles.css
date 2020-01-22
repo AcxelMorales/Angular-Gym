@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.container-f {
+  max-width: 25em;
+}
+
+.text-h1 {
+  font-size: 19px;
+  margin-bottom: 20px;
+}

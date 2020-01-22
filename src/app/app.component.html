@@ -1,14 +1,12 @@
-<accordion [isAnimated]="true">
-  <accordion-group heading="Static Header">
-    This content is straight in the template.
-  </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
-  </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
-  </accordion-group>
-  <accordion-group heading="Another group">
-    <p>Some content</p>
-  </accordion-group>
-</accordion>
+<div *ngIf="user && !loading; else showLogin">
+  <h1>Hello {{ user.email }}!</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+  <div class="loading" *ngIf="loading">
+    <p>Cargando...</p>
+  </div>
+  <app-sign-in *ngIf="!loading"></app-sign-in>
+</ng-template>
+
+<router-outlet></router-outlet>
