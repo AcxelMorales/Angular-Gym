@@ -22,8 +22,4 @@ export class AppComponent {
     });
   }
 
-  logout(): void {
-    this.afAuth.auth.signOut();
-  }
-
 }

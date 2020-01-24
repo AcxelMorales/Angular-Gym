@@ -1,9 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
 .container-f {
+  margin: auto;
   max-width: 25em;
 }
 
 .text-h1 {
   font-size: 19px;
   margin-bottom: 20px;
+}
+
+.waiting {
+  margin-top: 3em;
+  width: 100%;
+  height: 80vh;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
