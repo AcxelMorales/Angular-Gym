@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './sign-in.component.html',
   styles: []
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent {
 
   form: FormGroup;
 
@@ -23,9 +23,6 @@ export class SignInComponent implements OnInit {
       email: new FormControl(null, [Validators.email, Validators.required]),
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     });
-  }
-
-  ngOnInit(): void {
   }
 
   login(f: FormGroup): void {
